@@ -5,53 +5,110 @@
     <title>Mijn Intro Pagina</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        * { box-sizing: border-box; }
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
             margin: 0;
-            padding: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
             color: #333;
         }
-        .container {
-            max-width: 800px;
-            margin: 60px auto;
-            background: #ffffff;
+        .card {
+            max-width: 900px;
+            margin: 80px auto;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+        .profile {
+            background: #f4f6fb;
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .profile img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #667eea;
+        }
+        .profile h2 {
+            margin: 10px 0 5px;
+        }
+        .profile p {
+            color: #666;
+            font-size: 0.95em;
+        }
+        .content {
+            padding: 50px;
         }
         h1 {
             margin-top: 0;
-            color: #2c3e50;
+            color: #667eea;
         }
-        p {
-            line-height: 1.6;
+        .buttons a {
+            display: inline-block;
+            margin-top: 20px;
+            margin-right: 10px;
+            padding: 10px 18px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
         }
-        .footer {
+        .buttons a:hover {
+            background: #5563d6;
+        }
+        footer {
             margin-top: 40px;
-            font-size: 0.9em;
-            color: #777;
+            font-size: 0.85em;
+            color: #888;
+        }
+        @media (max-width: 768px) {
+            .card {
+                grid-template-columns: 1fr;
+            }
+            .content {
+                padding: 30px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+
+<div class="card">
+    <div class="profile">
+        <img src="https://via.placeholder.com/300" alt="Profielfoto">
+        <h2>[Jouw naam]</h2>
+        <p>Persoonlijke intro pagina</p>
+    </div>
+    <div class="content">
         <h1>Welkom!</h1>
         <p>
-            Mijn naam is <strong>[jouw naam]</strong>.<br>
-            Dit is mijn persoonlijke introductiepagina.
+            Leuk dat je mijn pagina bezoekt. Mijn naam is <strong>[Jouw naam]</strong> en dit is mijn persoonlijke introductiewebsite.
         </p>
         <p>
-            Op deze website vertel ik kort wie ik ben en waar mijn interesses liggen.
-            Ik hou van leren, nieuwe ideeën ontdekken en werken met technologie.
+            Ik ben geïnteresseerd in technologie, creativiteit en nieuwe ideeën.
+            Op deze pagina deel ik kort wie ik ben en wat mij bezighoudt.
         </p>
         <p>
-            Deze pagina is bewust simpel gehouden en gemaakt met HTML.
+            Deze website is eenvoudig gebouwd met HTML en gehost via GitHub Pages.
         </p>
 
-        <div class="footer">
-            © 2025 – Mijn persoonlijke website
+        <div class="buttons">
+            <a href="#">Contact</a>
+            <a href="#">LinkedIn</a>
         </div>
+
+        <footer>
+            © 2025 – Mijn persoonlijke website
+        </footer>
     </div>
+</div>
+
 </body>
 </html>
